@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-18 15:49:10
- * @LastEditTime: 2020-11-18 16:07:06
+ * @LastEditTime: 2020-11-20 23:48:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /simhash/example/demo.cpp
@@ -12,7 +12,7 @@
 //this define can avoid some logs which you don't need to care about.
 #define LOGGER_LEVEL LL_WARN 
 
-#include "simhash/Simhasher.hpp"
+#include "simhash/simhasher.hpp"
 using namespace simhash;
 
 int main(int argc, char** argv)

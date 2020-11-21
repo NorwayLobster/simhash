@@ -1,19 +1,23 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.6)
 PROJECT(simhash)
 
+add_subdirectory(example)
+
+ADD_DEFINITIONS(-O3 -Wall -g)
 add_library(${PROJECT_NAME} INTERFACE)
 add_library(sub::simhash ALIAS ${PROJECT_NAME})
+
 target_include_directories(${PROJECT_NAME} 
   INTERFACE 
-    ${PROJECT_SOURCE_DIR}/3pp/simhash/include
+    ${PROJECT_SOURCE_DIR}/include
 )
 target_link_libraries(${PROJECT_NAME} 
   INTERFACE 
     sub::cppjieba
 )
+
 # INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/deps ${PROJECT_SOURCE_DIR}/include)
 
-ADD_DEFINITIONS(-O3 -Wall -g)
 # IF(APPLE) 
 #     ADD_DEFINITIONS(-std=c++11)
 # endif()
