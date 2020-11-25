@@ -25,6 +25,7 @@ int main(int argc, char** argv)
     uint64_t u64_1 = 0;
     vector<pair<string ,double> > res;
     simhasher.extract(s, res, topN);
+
     simhasher.make(s, topN, u64);
     simhasher.make(s1, topN, u64_1);
     cout<< "文本：\"" << s << "\"" << endl;

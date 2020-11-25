@@ -16,6 +16,8 @@ target_link_libraries(${PROJECT_NAME}
     sub::cppjieba
 )
 
+install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include DESTINATION include)
 # INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/deps ${PROJECT_SOURCE_DIR}/include)
 
 # IF(APPLE) 
